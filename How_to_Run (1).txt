@@ -1,0 +1,93 @@
+🖐️ HOW TO RUN GESTURE MOUSE ON YOUR COMPUTER
+
+Follow these simple steps to set it up and run it for the first time 👇
+
+------------------------------------------------------------
+1️⃣ INSTALL PYTHON
+------------------------------------------------------------
+Make sure Python 3.8 or higher is installed.
+Check by running this in Command Prompt:
+    python --version
+
+If not installed, download it from:
+https://www.python.org/downloads/
+✅ During setup, check "Add Python to PATH" before installing.
+
+------------------------------------------------------------
+2️⃣ OPEN THE PROJECT FOLDER
+------------------------------------------------------------
+Put the file gesture_mouse.py in a folder (for example, C:\GestureMouse).
+
+Then open Command Prompt in that folder:
+- You can do this by typing 'cmd' in the folder path bar and pressing Enter.
+
+------------------------------------------------------------
+2.1️⃣ CREATE A VIRTUAL ENVIRONMENT (recommended)
+------------------------------------------------------------
+It's a good idea to use a virtual environment so package installs don't affect other projects.
+
+Create it:
+    python -m venv venv
+
+Activate it:
+- Windows:
+    venv\Scripts\activate
+- macOS / Linux:
+    source venv/bin/activate
+
+To deactivate later, run:
+    deactivate
+
+------------------------------------------------------------
+3️⃣ INSTALL REQUIRED PACKAGES
+------------------------------------------------------------
+Run this command (make sure you’re connected to the internet):
+
+    pip install opencv-python mediapipe pyautogui pycaw comtypes screen-brightness-control SpeechRecognition google protobuf
+
+If you prefer to use a requirements file, create `requirements.txt` with the above packages and run:
+    pip install -r requirements.txt
+
+If you see errors about pyaudio, fix it with:
+    pip install pipwin
+    pipwin install pyaudio
+
+------------------------------------------------------------
+4️⃣ ALLOW CAMERA & MICROPHONE ACCESS
+------------------------------------------------------------
+When you run it the first time, Windows may ask to allow camera or mic access.
+Click Allow — the program needs them to detect gestures and voice commands.
+
+------------------------------------------------------------
+5️⃣ RUN THE PROGRAM
+------------------------------------------------------------
+In the same folder, type:
+    python gesture_mouse.py
+
+✅ The webcam window will open.
+Move your hand in front of the camera and you’ll see tracking lines.
+
+------------------------------------------------------------
+6️⃣ USE THE GESTURES
+------------------------------------------------------------
+✌️ V shape ........ Move mouse
+👊 Fist ............ Drag & Drop
+☝️ Index up ........ Right click
+🤞 Two fingers ..... Double click
+🤏 Pinch ........... Scroll / Adjust brightness / Adjust volume
+✋ Palm open ....... Idle
+
+🎤 VOICE COMMANDS:
+- "Click" → Left click
+- "Right click" → Right click
+- "Double click" → Double Click
+- "Scroll up" / "Scroll down"
+- "Stop gesture" → Exit program
+
+------------------------------------------------------------
+7️⃣ TO EXIT
+------------------------------------------------------------
+Press Esc or say "Stop gesture", or just close the webcam window.
+
+That's it! 🖥️
+Now your computer can be controlled entirely by your hand gestures and voice 🤖✨
