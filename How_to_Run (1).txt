@@ -1,93 +1,101 @@
-🖐️ HOW TO RUN GESTURE MOUSE ON YOUR COMPUTER
+How to Run This Project on a New System
+Follow these instructions exactly to get the project running.
 
-Follow these simple steps to set it up and run it for the first time 👇
+1. Prerequisites
+Before you start, make sure your new system has:
 
-------------------------------------------------------------
-1️⃣ INSTALL PYTHON
-------------------------------------------------------------
-Make sure Python 3.8 or higher is installed.
-Check by running this in Command Prompt:
-    python --version
+Python 3.8 or newer: You can download it from python.org.
 
-If not installed, download it from:
-https://www.python.org/downloads/
-✅ During setup, check "Add Python to PATH" before installing.
+Important: During installation, make sure to check the box that says "Add Python to PATH".
 
-------------------------------------------------------------
-2️⃣ OPEN THE PROJECT FOLDER
-------------------------------------------------------------
-Put the file gesture_mouse.py in a folder (for example, C:\GestureMouse).
+A Webcam: For gesture control.
 
-Then open Command Prompt in that folder:
-- You can do this by typing 'cmd' in the folder path bar and pressing Enter.
+A Microphone: For voice control.
 
-------------------------------------------------------------
-2.1️⃣ CREATE A VIRTUAL ENVIRONMENT (recommended)
-------------------------------------------------------------
-It's a good idea to use a virtual environment so package installs don't affect other projects.
+2. Get Your Project Files
+You need to get your three Python files (main.py, gesture_engine.py, voice_engine.py) onto the new system.
 
-Create it:
-    python -m venv venv
+If your project is on GitHub:
 
-Activate it:
-- Windows:
-    venv\Scripts\activate
-- macOS / Linux:
-    source venv/bin/activate
+Install Git from git-scm.com.
 
-To deactivate later, run:
-    deactivate
+Open Command Prompt (CMD) or PowerShell.
 
-------------------------------------------------------------
-3️⃣ INSTALL REQUIRED PACKAGES
-------------------------------------------------------------
-Run this command (make sure you’re connected to the internet):
+Clone the repository (replace with your actual URL):
 
-    pip install opencv-python mediapipe pyautogui pycaw comtypes screen-brightness-control SpeechRecognition google protobuf
+Bash
 
-If you prefer to use a requirements file, create `requirements.txt` with the above packages and run:
-    pip install -r requirements.txt
+git clone https://github.com/your-username/your-project-name.git
+Navigate into the folder:
 
-If you see errors about pyaudio, fix it with:
-    pip install pipwin
-    pipwin install pyaudio
+Bash
 
-------------------------------------------------------------
-4️⃣ ALLOW CAMERA & MICROPHONE ACCESS
-------------------------------------------------------------
-When you run it the first time, Windows may ask to allow camera or mic access.
-Click Allow — the program needs them to detect gestures and voice commands.
+cd your-project-name
+If you have the files in a ZIP folder:
 
-------------------------------------------------------------
-5️⃣ RUN THE PROGRAM
-------------------------------------------------------------
-In the same folder, type:
-    python gesture_mouse.py
+Copy the ZIP folder to the new system.
 
-✅ The webcam window will open.
-Move your hand in front of the camera and you’ll see tracking lines.
+Right-click the ZIP and select "Extract All...".
 
-------------------------------------------------------------
-6️⃣ USE THE GESTURES
-------------------------------------------------------------
-✌️ V shape ........ Move mouse
-👊 Fist ............ Drag & Drop
-☝️ Index up ........ Right click
-🤞 Two fingers ..... Double click
-🤏 Pinch ........... Scroll / Adjust brightness / Adjust volume
-✋ Palm open ....... Idle
+Open Command Prompt (CMD) or PowerShell.
 
-🎤 VOICE COMMANDS:
-- "Click" → Left click
-- "Right click" → Right click
-- "Double click" → Double Click
-- "Scroll up" / "Scroll down"
-- "Stop gesture" → Exit program
+Navigate into the extracted folder:
 
-------------------------------------------------------------
-7️⃣ TO EXIT
-------------------------------------------------------------
-Press Esc or say "Stop gesture", or just close the webcam window.
+Bash
 
-That's it! 🖥️
-Now your computer can be controlled entirely by your hand gestures and voice 🤖✨
+cd path\to\your-project-folder
+3. Create the requirements.txt File
+Inside your project folder (where main.py is), create a new file named requirements.txt and paste the following text into it exactly.
+
+Plaintext
+
+opencv-python
+mediapipe
+pyautogui
+SpeechRecognition
+pycaw
+screen-brightness-control
+pyaudio
+comtypes
+protobuf
+4. Set Up the Virtual Environment & Install Libraries
+This is the most important part. It creates a clean, isolated space for your project's libraries.
+
+Open your terminal (CMD or PowerShell) inside your project folder.
+
+Create a virtual environment named venv:
+
+Bash
+
+python -m venv venv
+Activate the virtual environment:
+
+Bash
+
+venv\Scripts\activate
+(You'll know it's active because your terminal prompt will change to show (venv) at the beginning).
+
+Install all the libraries from your requirements.txt file:
+
+Bash
+
+pip install -r requirements.txt
+This will take a minute or two as it downloads and installs all the necessary packages.
+
+5. Run Your Project
+Now that everything is installed, you can run your application.
+
+Make sure your virtual environment is still active (you see (venv) in the prompt).
+
+Run the main.py script:
+
+Bash
+
+python main.py
+Your gesture window should appear, and the terminal will show the voice assistant is "calibrating." The project is now running.
+
+To run it again in the future: You only need to do steps 1-4 one time. From now on, just open a terminal in your project folder and run these two commands:
+
+venv\Scripts\activate (to turn on the environment)
+
+python main.py (to start the program)
